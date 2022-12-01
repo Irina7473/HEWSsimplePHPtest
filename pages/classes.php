@@ -31,8 +31,9 @@ class News
 
     function __construct($id = 0, $idate=0, $title, $announce, $content)
     {
+
         $this->id = $id;
-        $this->idate = $idate;
+        $this->idate = date("d.m.Y", $idate);
         $this->title = $title;
         $this->announce = $announce;
         $this->content = $content;

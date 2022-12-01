@@ -31,15 +31,17 @@ include_once("pages/classes.php");
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <?php include_once("pages/news.php");?>
+
             <?php
-            echo '<div class="row" style="margin-right:10px;" >';
+/*            echo '<div class="row" style="margin-right:10px;" >';
             $items=News::GetNews();
             foreach($items as $item)
             {
                 $item->DrawAll();
             }
             echo '</div>';
-            ?>
+            */?>
         </div>
     </div>
 

@@ -11,4 +11,4 @@ $item->DrawContent();
 ?>
 <br />
 <hr>
-<a href='news.php'>Все новости >></a>
+<a href='../index.php'>Все новости</a>
