@@ -1,0 +1,42 @@
+body{
+    padding-top: 30px;
+    padding-left: 10px;
+}
+h1{
+    padding-left: 10px;
+}
+.artilce{
+    padding: 5px;
+}
+.idate{
+    margin-right:10px;
+    background: darkmagenta;
+    color:white;
+    font-size:12pt;
+}
+a:hover{
+    color: darkmagenta;
+}
+.paginate{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pagination > li > a{
+    text-decoration: none;
+    display: block;
+    border: 1px solid gray;
+    background: aliceblue;
+    color: #000;
+    font-weight: 400;
+    font-size: 1em;
+    width: 3em;
+    height: auto;
+    margin-right: 10px;
+    padding: 5px;
+    text-align: center;
+}
+.pagination > li > a:hover, .pagination > li > a:active{
+    background: darkmagenta;
+    color: white;
+}

@@ -77,7 +77,7 @@ class News
             $pdo = Tools::connect();
             var_dump($pdo);
             if ($newsid == 0) {
-                $ps = $pdo->prepare("SELECT * FROM news");
+                $ps = $pdo->prepare("SELECT * FROM news ORDER BY idate DESC");
                 $ps->execute();
             } else {
                 $ps = $pdo->prepare("SELECT *FROM news WHERE id=?");
@@ -110,11 +110,13 @@ class News
     }
     function DrawContent()
     {
+        echo "<div class='container-fluid'>";
         echo "<h2>";
         echo $this->title;
         echo "</h2><hr>";
-        echo "<div>";
+        echo "<p>";
         echo $this->content;
+        echo "</p>";
         echo "</div>";
     }
 }
