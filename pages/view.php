@@ -1,16 +1,14 @@
 <?php
+@session_start();
 include_once("classes.php");
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 
-echo $id;
-$item=News::fromDb(1);
+$item=News::fromDb($id);
 if($item==null)exit();
 $item->DrawContent();
 ?>
 <br />
 <hr>
 <a href='news.php'>Все новости >></a>
-
-

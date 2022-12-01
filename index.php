@@ -1,4 +1,5 @@
-<?php @session_start();
+<?php
+@session_start();
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 }
@@ -31,7 +32,7 @@ include_once("pages/classes.php");
     <div class="row">
         <div class="col-12">
             <?php
-            echo '<div class="row" id="result" style="margin-right:10px;" >';
+            echo '<div class="row" style="margin-right:10px;" >';
             $items=News::GetNews();
             foreach($items as $item)
             {

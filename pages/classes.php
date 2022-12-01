@@ -1,4 +1,5 @@
 <?php
+@session_start();
 
 class Tools
 {
@@ -14,8 +15,6 @@ class Tools
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8'
         );
-        //$pdo = new PDO($cs, $user, $pass, $options);
-        //return $pdo;
         try {
             $pdo = new PDO($cs, $user, $pass, $options);
             return $pdo;
@@ -96,12 +95,11 @@ class News
 
     function DrawAll()
     {
-        echo "<div><span class='pull-right' style='margin-left:10px; background: darkmagenta; 
-                    color:white;font-size:12pt;'>";
+        echo "<div><span class='pull-right' style='margin-left:10px; 
+                        background: darkmagenta; color:white;font-size:12pt;'>";
         echo $this->idate;
         echo "</span>";
-        echo "<a href='pages/view.php?id='" . $this->id .
-            "' class='pull-left' style='margin-left:10px;' >";
+        echo "<a href='pages/view.php?id=".$this->id."' class='pull-left' style='margin-left:10px' >";
         echo $this->title;
         echo "</a>";
         echo "<p>";
